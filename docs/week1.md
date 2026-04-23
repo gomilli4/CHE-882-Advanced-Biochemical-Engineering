@@ -2,12 +2,12 @@
 This weeks assignment involved learning to use PyMOL. I chose to use
 
 ## Renders
-![binding1](images/binding1.png)
-![binding_specific](images/binding_specific.png)
-![binding_specific_orthogonal](images/binding_specific_orthogonal.png)
-![binding_specific2](images/binding_specific2.png)
-![h_bond1](images/h_bond1.png)
-![h_bonds234](images/h_bonds234.png)
+![binding1](images/week1/binding1.png)
+![binding_specific](images/week1/binding_specific.png)
+![binding_specific_orthogonal](images/week1/binding_specific_orthogonal.png)
+![binding_specific2](images/week1/binding_specific2.png)
+![h_bond1](images/week1/h_bond1.png)
+![h_bonds234](images/week1/h_bonds234.png)
 
 ## Written component
 I chose FLS2 bound to flg22 (PDB: 4MN8) because I like plants and was curious what this receptor looked like. I also find it interesting how plants manage to receive signals from the environment and respond to them, and receptors like these are important lines in those signaling pathways.

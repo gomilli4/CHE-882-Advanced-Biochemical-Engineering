@@ -54,3 +54,41 @@ pip install dgl==1.1.0
 ```
 
 which worked.
+
+After apparently resolving the dependency issues and getting the correct version of the libraries, I tried to run DPFunc on the course proteins. At this point I was still not following the tutorial which would led to other complications.
+
+I started by trying to use the existing data processing scripts in the DataProcess directory of the repo. The first script I attempted was
+
+```
+python DataProcess/old_generate_points.py -i eight_pids.txt -o data/pdb_points.pkl
+```
+
+which resulted in more problems
+- The script expected a pkl file containing protein IDs, not a text file
+- The script also wanted a specific file naming convention
+
+After fixing those issues, I was met with more dependency problems like not having tqdm installed.
+
+It was becoming increasingly clear that it wasn't efficient to keep trying to modify the old scripts to do what I needed them to, so I had chat gpt try and come up wit a python script that would extract the amino acid sequence and the 3D coordinates of the residues (see /scripts/week4 for the python files I used during this week), and save the newly produced pdb_seqs.pkl and pdb_points.pkl files in the "processed_file" directory.
+
+I also had chat gpt try and make a script that generated the protein embeddings using the ESM model. This immediately failed because I didn't have the esm package installed, but that was quickly resolved with
+
+```
+pip install fair-esm
+```
+
+Initally, the script I made (process_esm.py) had issues with the memory on the HPC node I was using. To get around that, chat gpt suggested I use a smaller ESM model lik esm2_t6_8M which I did with the run_esm_minimal.py file. This file loaded the protein sequences, ran them through the smaller ESM model, generated the per-residue embeddings, and saved them in processed_file/esm_emds/. The embeddings had shape (sequence_length, 320) which would present a problem down the line.
+
+The next step was to build the graph representations which I did with the build_graph_minimal.py script, and the produced graphs were saved in processed_file/graph_features/.
+
+To actually run the model, I used the
+
+```
+python DPFunc_pred.py -d mf -n -1 -p class8
+```
+
+command. It looked like things were running correctly as far as the model architecture loading, the graph data being read, and the pipeline progressing without crashing. Unfortunately, the script failed at the prediction stage because the program couldn't find the pretrained model checkpoints.
+
+At this point, I realized that the embeddings I generated were 320 dimensional, but DPFunc expected a 1280 dimensional embedding from the larger ESM model I was having memory issues with.
+
+By the time I realized that, it was 3:45pm right before class, so I stopped trying. To get it to work, I think I need to have downloaded the pretrained model weights (which I probably would have if I followed the tutorial). However, Aaron also struggled to get it working and I think he did follow the tutorial, so maybe it was just bad luck.
