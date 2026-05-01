@@ -1,0 +1,50 @@
+completed!
+predict affinity: 11.026854515075684
+completed!
+predict affinity: 11.002799034118652
+completed!
+predict affinity: 11.196578025817871
+completed!
+predict affinity: 10.850484848022461
+completed!
+predict affinity: 11.181325912475586
+completed!
+predict affinity: 10.991884231567383
+completed!
+predict affinity: 10.926304817199707
+completed!
+predict affinity: 11.181370735168457
+completed!
+predict affinity: 10.722212791442871
+completed!
+predict affinity: 10.851913452148438
+completed!
+predict affinity: 11.042819023132324
+completed!
+predict affinity: 10.928621292114258
+completed!
+predict affinity: 11.05726146697998
+completed!
+predict affinity: 11.51953125
+completed!
+predict affinity: 11.464500427246094
+completed!
+predict affinity: 11.036031723022461
+completed!
+predict affinity: 10.92322826385498
+completed!
+predict affinity: 10.903818130493164
+completed!
+predict affinity: 11.121850967407227
+completed!
+predict affinity: 10.904922485351562
+completed!
+predict affinity: 11.1257963180542
+completed!
+predict affinity: 11.683197021484375
+completed!
+predict affinity: 11.031400680541992
+completed!
+predict affinity: 10.920308113098145
+completed!
+predict affinity: 11.570892333984375

@@ -1,0 +1,19 @@
+sequences:
+  - protein:
+      id: A
+      sequence: |
+        MGSSHHHHHHSSGENLYFQGHMQVQLQESGGDLVQPGGSLKLSCAASGFTFSSYGMSWVRQTPDKRLELVATINSNGGSTFYPDSVKGRFTISRDNAKNTLYLQMSSLKSEDTAMYYCARRRNYPYYYGSRGYFDYWGQGTTVTVSSGGGGSGGGGSGGGGSDIELTQSPASLAVSLGQRATISCRASESVDSYGNSFMHWYQQKPGQPPKLLIYRALNLESGIPARFSGSGSRTDFTLTINPVEADDVAIYYCQQSNEDPWTFGGGTKLEIK
+      structure:
+        format: mmcif
+        path: /mnt/home/gomilli4/CHE882/mid_semester_project/inputs/8DGR_base.cif
+
+  - protein:
+      id: B
+      sequence: |
+        APMGSDPATACCFSYTARKLPRNFVVDYYETSSLCSQPAVVFQTKRSKQVCADPSESWVQEYVYDLEL
+      structure:
+        format: mmcif
+        path: /mnt/home/gomilli4/CHE882/mid_semester_project/inputs/3TN2.cif
+
+prediction:
+  samples: 5
